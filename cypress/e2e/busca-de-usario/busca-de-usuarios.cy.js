@@ -28,13 +28,6 @@ it('Busca de usuário com dados inválidos', () => {
     cy.Status()
     cy.get('.oxd-form-actions > .oxd-button--secondary').click({force:true})
     cy.wait(1000)
-
-
-
-
-
-
-
     })
 })
 
