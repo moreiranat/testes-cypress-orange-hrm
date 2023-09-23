@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Cypress specific
+cypress/videos/
+cypress/screenshots/
+cypress/fixtures/
+
+# Ignore configuration files
+cypress.env.json
+cypress.json
+
+# Ignore any generated files or artifacts
+cypress/plugins/index.js
+
+# Ignore any custom commands or support files if they are not versioned
+cypress/support/index.js
+
+# Ignore any potential Cypress cache
+.cypress-cache/
+
+# Ignore any test results or reports
+mochawesome-report/
+
+# Ignore package files
+package.json
+package-lock.json
