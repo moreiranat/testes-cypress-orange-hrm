@@ -1,5 +1,8 @@
+.cypress.io/introduction-to-cypress
+
 //import {fazerLogin} from '../support/commands'
 import '../../pages/CadastroPage/CadastroPage.js'
+
 
 describe('Cenário Cadastro de Usuários', () => {
 

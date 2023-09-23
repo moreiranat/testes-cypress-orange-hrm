@@ -88,3 +88,4 @@ Cypress.Commands.add('cadastroComSucesso', () => {
     cy.get('.oxd-toast').should('contain', 'Success')
 
 });
+
