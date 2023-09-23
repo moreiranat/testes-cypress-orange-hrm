@@ -1,5 +1,5 @@
 
-import {fazerLogin} from '../support/commands'
+import {fazerLogin} from '../../support/commands'
 
 
 describe('Teste Plataforma OrangeHRM', () => {
