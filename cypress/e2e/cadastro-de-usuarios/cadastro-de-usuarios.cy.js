@@ -1,27 +1,38 @@
-/// <reference types="cypress" />
-
-// Welcome to Cypress!
-//
-// This spec file contains a variety of sample tests
-// for a todo list app that are designed to demonstrate
-// the power of writing tests in Cypress.
-//
-// To learn more about how Cypress works and
-// what makes it such an awesome testing tool,
-// please read our getting started guide:
-// https://on.cypress.io/introduction-to-cypress
+//import {fazerLogin} from '../support/commands'
+import '../../pages/CadastroPage/CadastroPage.js'
 
 describe('Cenário Cadastro de Usuários', () => {
-    beforeEach(() => {
-      
-      cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    })
-  
-    it('Validar Criação da Senha do Usuário', () => {
-      
-    })
 
-    it('Validar Registro de Usuário com username que já existe', () => {
-      
-    })
-})
+  beforeEach(() => {
+    
+    
+    cy.login('Admin', 'admin123');
+  });
+
+  it('Validar Registro de Usuário com username que já existe', () => {
+
+    cy.clickAdmin();
+
+    cy.clickAddUser();
+
+    cy.typeUserRole();
+
+    cy.typeEmployeeName();
+
+    cy.typeStatus();
+
+    cy.typeUsernameRegister();
+
+    cy.typePasswordRegister();
+
+    cy.typeConfirmPassword();
+
+    cy.clickSave();
+
+    cy.getErrorRegister().contains('Already exists')
+    
+    cy.url().should('include', 'https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser');
+    
+  });
+});
+  
